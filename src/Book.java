@@ -56,4 +56,13 @@ public class Book {
     public void setPages(int pages) {
         this.pages = pages;
     }
+
+    public void printBookInfo() {
+        System.out.println("ID: " + id);
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("ISBN: " + isbn);
+        System.out.println("Pages: " + pages);
+        System.out.println("------------------------");
+    }
 }

@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Inventory {
 
-    private ArrayList<Book> mainInventory;
-    private ArrayList<Book> borrowedBooks;
+    private final ArrayList<Book> mainInventory;
+    private final ArrayList<Book> borrowedBooks;
 
     // Constructor
     public Inventory() {
@@ -125,5 +125,20 @@ public class Inventory {
     // check if book exists anywhere
     private boolean bookExists(int id) {
         return findInMainInventory(id) != null || findInBorrowed(id) != null;
+    }
+
+    // print all books in inventory (Added because of requirement but not using since I wanted to try out a JTable for display)
+    public void printAll() {
+        if(mainInventory.isEmpty()) {
+            System.out.println("No books in inventory.");
+            return;
+        }
+
+        System.out.println("Books currently in inventory:");
+        System.out.println("============================");
+
+        for(Book book : mainInventory) {
+            book.printBookInfo();
+        }
     }
 }
