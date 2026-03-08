@@ -5,6 +5,10 @@ public class Book {
     private String isbn;
     private int pages;
 
+    // default constructor
+    public Book() {}
+
+    // constructor with parameters
     public Book(int id, String title, String author, String isbn, int pages) {
         this.id = id;
         this.title = title;
